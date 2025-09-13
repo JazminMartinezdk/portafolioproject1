@@ -1,114 +1,155 @@
-
 html {
-
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: 'Caprasimo', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #675a5a;
+    color: #0e0d0d;
+}
 
-    body {
-        font-family: 'Caprasimo', cursive;
-        margin: 0;
-        padding: 0;
-        background-color: #675a5a;
-        color: #0e0d0d;
-    }
+
 h1 {
-    font-size:100px;
-    -webkit-text-stroke: 2px white; /* outline thickness + color */
-    
+    font-size: 2.5rem; /* mobil venlig størrelse */
+    -webkit-text-stroke: 2px white;
+    text-align: center;
 }
+
 #intro p {
-    font-size:50px;
-    -webkit-text-stroke: 1px white; /* outline thickness + color */
-
+    font-size: 1.2rem;
+    -webkit-text-stroke: 1px white;
+    text-align: center;
 }
-    #intro, #kontakt, #links{
-        text-align:center;
-        padding:20px;
+
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
     }
-
-    #about-me, #work-experience {
-        text-align: left;
-        padding: 20px;
-        line-height: 1.6;
-
-
-   }
-
-    #about-me p, #work-experience p {
-
-         margin-bottom: 15px;
-     }
-         
-
- #about-me, #work-experience, #links, #kontakt {
-        background-color: rgba(255, 255, 255, 0.9); /* white box with slight transparency */
-        max-width: 500px;
-        padding: 20px 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        margin: auto ; /* space from right edge */
-        margin-bottom: 30px
+    #intro p {
+        font-size: 2rem;
     }
+}
 
-     nav {
-        font-size:25px;
-        margin: 0 15px;
-        text-decoration: none;
-        color: #ffffff;
-        display: flex;
+
+#intro,
+#kontakt,
+#links {
+    text-align: center;
+    padding: 20px;
+}
+
+#about-me,
+#work-experience {
+    text-align: left;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+#about-me p,
+#work-experience p {
+    margin-bottom: 15px;
+}
+
+#about-me,
+#work-experience,
+#links,
+#kontakt {
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+
+nav {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column; /* mobil: lodret menu */
+    list-style-type: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Desktop: vandret menu */
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
         justify-content: space-evenly;
-        align-items: center;
-        
+        gap: 2rem;
     }
+}
 
 
-    nav a:hover {
-        text-decoration: underline;
-    }
+img {
+    border-radius: 10px;
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+}
 
-    img {
-        border-radius: 10px;
-        margin-top: 20px;
-    }
 
-    a {
-        color: #0e0d0d;
-    }
+a {
+    color: #0e0d0d;
+}
+a:hover {
+    color: #b37400;
+}
 
-    a:hover {
-        color: #b37400;
-    }
-    nav ul{
-        display:flex;
-        justify-content:space-around;
-        align-items: space-evenly;
-        list-style-type:none;
-        width: 5000px;
-    }
 
 .flex-container {
     display: flex;
+    flex-direction: column; /* mobil: stack */
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 1000px;
     background-color: #ffffff;
-    flex-direction: row;
-    justify-content:center;
-    gap:150px;
-    align-items:center;
-    margin:200px;
-    width:75%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
 }
 
-.flex-container > div P {
+.flex-container > div > p {
     background-color: #ffffff;
     color: #0e0d0d;
-    width: 75px;
-    justify-content:left;
-    gap:100px;
-    align-item:center;
-    margin: 0px;
+    margin: 0;
     text-align: left;
-    line-height: 100px;
-    font-size: 150px;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
 
+
+@media (min-width: 768px) {
+    .flex-container {
+        flex-direction: row;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .flex-container > div > p {
+        font-size: 1.5rem;
+    }
 }
 
